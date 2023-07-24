@@ -1,0 +1,418 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+header {
+    font-size: 40px;
+    margin-left: 26%;
+    font-family: monospace;
+
+}
+
+.head1{
+   margin-left: 35%;
+}
+
+h6 {
+    font-size: 23px;
+    font-family: monospace;
+}
+
+.hr1 {
+    border: 6px solid #734949;
+    border-radius: 6px;
+
+}
+
+h2 {
+    font-family: monospace;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ce8a8a;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 18px;
+    color: #734949;
+    margin-bottom: 30px;
+
+}
+
+.sidenav a:hover {
+    color: #645f5f;
+    cursor: pointer;
+    margin-inline: 4%;
+
+    transition: ease-in-out;
+    transition-duration: 0.5s
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 15%;
+    margin-left: 45px;
+
+}
+
+
+.quote {
+    text-align: center;
+    font-size: 17px;
+    font-style: italic;
+    font-family: monospace;
+
+    border-radius: 12px;
+    height: 42px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1.5%;
+    border-color: #734949;
+    border-style: solid
+}
+
+.subheading {
+    font-size: 33px;
+    font-weight: lighter;
+    font-family: monospace;
+    margin-top: 6%;
+
+}
+
+.main {
+    margin-left: 300px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #d69b9bdc;
+
+}
+
+/* SkillspBars */
+
+.Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.Container .Card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: #9e6262;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8%;
+
+}
+
+.Container .Card .Percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-left: 35px;
+    margin-top: 52px;
+
+}
+
+.Container .Card .Percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg)
+}
+
+.Container .Card .Percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 3;
+    stroke: #a78686;
+    transform: translate(5px, 5px);
+}
+
+.Container .Card .Percent svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* transform: rotate(calc(3.6deg * var(--num))); */
+    /* 360deg / 100 = 3.6  */
+    animation: animateDot 2s linear forwards;
+
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+        0 0 30px var(--clr);
+}
+
+.Number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+
+}
+
+.Number h2 {
+    font-weight: 100;
+    color: #eae3e3;
+    font-family: monospace;
+    font-size: 21px;
+
+}
+
+.Number p {
+    font-weight: 100;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #eae3e3;
+
+}
+.space1{
+    /* background-color: azure; */
+    width: 100vw;
+    height: 15rem;
+}
+
+.space2 {
+    width: 100vw;
+    height: 5rem;
+}
+
+p {
+    font-family: monospace;
+}
+
+.Container2 {
+margin-left: 20%;
+margin-top: 40px;
+
+}
+
+.MicrosoftOfficeSkills h2{
+font-family: monospace;
+font-weight: 100;
+letter-spacing: 1px;
+margin-top: 2%;
+color: #734949;
+}
+
+.ProgressBar {
+    background: #9b9393;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.ProgressBar div {
+    height: 10px;
+    width: 0%;
+    border-radius: 5px;
+    /* background: #e3c8e6; */
+}
+
+.ProgressBar div span {
+    font-family: monospace;
+    font-size: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background:#ada8a8;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #e3c8e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.Excel {
+    background: #b77070;
+    animation: Excel 2s linear forwards;
+    animation-delay: 5s;
+}
+
+.Word {
+    background: #a78686;
+    animation: Word 2s linear forwards;
+    animation-delay: 5s;
+}
+
+.PowerPoint {
+    background: #a05353;
+    animation: PowerPoint 2s linear forwards;
+    animation-delay: 5s;
+}
+
+.Access {
+    background: #ce8a8a;
+    animation: Access 2s linear forwards;
+    animation-delay: 5s;
+}
+
+@keyframes Excel {
+    100% {
+       width: 86%; 
+    }
+}
+
+@keyframes Word {
+    100% {
+       width: 94%; 
+    }
+}
+
+@keyframes PowerPoint {
+    100% {
+       width: 91%; 
+    }
+}
+
+@keyframes Access{
+    100% {
+       width: 77%; 
+    }
+}
+.Excel span{
+    border: 2px solid #b77070;
+}
+
+.Word span{
+    border: 2px solid #a78686;
+}
+
+.PowerPoint span{
+    border: 2px solid #a05353;
+}
+
+.Access span{
+    border: 2px solid #ce8a8a;
+}
+
+
+/* .Container3 {
+    width: 50%;  
+    height: 40vh;
+    margin-top: 30px;
+    background: #ada8a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+ 
+form{
+    margin-left: 20%;
+    background: #a39e9e;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #dfdfdf;
+    font-size: 16px;
+    font-family: monospace;
+
+}
+
+form button {
+    font-family: monospace;
+    padding: 15px;
+    background: #a78686;
+    color: #dfdfdf;
+    font-size: 18px;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+} 
+
