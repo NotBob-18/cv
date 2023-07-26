@@ -421,11 +421,11 @@ form button {
 
   .quote {
     text-align: center;
-    font-size: 8.5px;
+    font-size: 13px;
     font-style: italic;
     font-family: monospace;
     border-radius: 12px;
-    height: 42px;
+    height: 64px;
     width: 80%;
     margin-left: 10%;
     margin-top: 1.5%;
@@ -616,5 +616,11 @@ form button {
     background: #ce8a8a;
     animation: Access 3s linear forwards;
     animation-delay: 1s;
+  }
+
+  header {
+    font-size: 15px;
+    margin-left: 16%;
+    font-family: monospace;
   }
 }
