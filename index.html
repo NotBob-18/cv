@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href="style.css">
-    <script src="app.js" defer></script>
-    <title>Michael's Resume</title>
+    <link rel=stylesheet href="style.css" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="app.js"></script>
+    <title>Michael Masala</title>
 </head>
 
 <body>
@@ -14,22 +15,17 @@
 
 
     <div class="sidenav" id="mySidenav">
-        <img src="./images/my_image.jpg" alt="My picture">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <img class="Img1" src="./images/my_image.jpg" alt="My picture">
+        
 
-        <ul>
-            <li><a onclick="myScroll(`Home`)">Home</a></li>
+        <ul class="ul">
+            <li><a onclick="myScroll(`Home`)"><i class="material-icons">home</i></a></li>
             <br>
-            <li><a onclick="myScroll(`WorkHistory`)">Work History</a></li>
+            <li><a onclick="myScroll(`WorkHistory`)"><i class="material-icons">computer</i></a></li>
             <br>
-            <li><a onclick="myScroll(`EducationHistory`)">Educational History</a></li>
+            <li><a onclick="myScroll(`EducationHistory`)"><i class="material-icons">bookmarks</i></a></li>
             <br>
-            <li><a onclick="myScroll(`ContactInformation`)">Contact Information</a></li>
+            <li><a onclick="myScroll(`ContactInformation`)"><i class="material-icons">person</i></a></li>
         </ul>
     </div>
 
@@ -62,6 +58,7 @@
             <br>
 
 
+
             <div class="Container">
 
                 <div class="Card">
@@ -71,6 +68,7 @@
                             <circle cx="70" cy="70" r="70"></circle>
                             <circle cx="70" cy="70" r="70"></circle>
                         </svg>
+
                         <div class="Number">
                             <h2>84<span>%</span></h2>
                             <p>HTML</p>
@@ -106,6 +104,8 @@
                     </div>
                 </div>
 
+
+
                 <div class="Card">
                     <div class="Percent" style="--clr:#e3c8e6;--num:45;">
                         <div class="dot"></div>
@@ -124,38 +124,40 @@
 
         <div class="Container2">
             <div class="MicrosoftOfficeSkills">
-            <h2>Excel</h2>
-            <br>
-            <div class="ProgressBar">
-                <div class="Excel"><span>86%</span></div>
-            </div>
+                <h2>Excel</h2>
 
-            <h2>Word</h2>
-            <br>
-            <div class="ProgressBar">
-                <div class="Word"><span>94%</span></div>
-            </div>
+                <div class="ProgressBar">
+                    <div class="Excel"><span>80%</span></div>
+                </div>
 
-            <h2>PowerPoint</h2>
-            <br>
-            <div class="ProgressBar">
-                <div class="PowerPoint"><span>91%</span></div>
-            </div>
+                <h2>Word</h2>
 
-            <h2>Access</h2>
-            <br>
-            <div class="ProgressBar">
-                <div class="Access"><span>77%</span></div>
-            </div>
+                <div class="ProgressBar">
+                    <div class="Word"><span>88%</span></div>
+                </div>
+
+                <h2>PowerPoint</h2>
+
+                <div class="ProgressBar">
+                    <div class="PowerPoint"><span>85%</span></div>
+                </div>
+
+                <h2>Access</h2>
+
+                <div class="ProgressBar">
+                    <div class="Access"><span>66%</span></div>
+                </div>
             </div>
         </div>
 
+        <img class="Img2" src="./images/Udemy_Certif.jpg" alt="Office Certificate">
 
 
-        <div class="space1"></div>
+<div class="space1"></div>
 
-        <section id="WorkHistory">
-            <header class="head1">Work History</header>
+
+<section id="WorkHistory">
+            <header>Work History</header>
             <div class="space2"></div>
 
 
@@ -164,8 +166,8 @@
 <hr>
 <p>Duties and Responsibilities: 
   - Liasing with markers via email and telephone,
-  - Booking Accommodation, Air travel and Transportation for markers to and from 
-  marking venues and their hotels,
+  - Booking Accommodation, Air travel and Transportation for markers 
+    to and from marking venues and their hotels,
   - Feilding calls to the Department,
   - Printer management,
   - Various general administration duties.
@@ -173,7 +175,8 @@
 <br>
 
 
-<h6>Data Capturer, Checker, Materials and Production Department Seasonal Asssistant.</h6>
+<h6>Data Capturer, Checker, Materials and,
+Production Department Seasonal Asssistant.</h6>
 <hr>
   <p>Duties and Responsibilities:
    - Capture final marks of candidates,
@@ -278,72 +281,21 @@ National Senior Certificate
             </p>
             <div class="space2"></div>
 
+            <!-- Contact form -->
             <div class="Container3">
-                
-            <form>
-           <h2>Contact Me Today</h2>
-           <input type="text" id="Name" placeholder="Your Name" required>
-           <input type="email" id="Email" placeholder="Email id" required>
-           <input type="text" id="PhoneNo." placeholder="Your Phone Number" required>
-           <textarea id="Message" rows="4" placeholder="How can i assist?"></textarea>
-           <button type="Submit">Submit</button>
-            </form>
+                <form>
+                    <h2>Contact Me Today</h2>
+                    <input type="text" id="Name" placeholder="Your Name" required>
+                    <input type="email" id="Email" placeholder="Email" required>
+                    <input type="text" id="PhoneNo." placeholder="Your Phone Number" required>
+                    <textarea id="Message" rows="4" placeholder="How can i be of assistance?"></textarea>
+                    <button class="SubmitBtn">Submit</button>
+                </form>
             </div>
-
-            <!-- <script scr="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-            function sendEmail(){
-                Email.send({
-    Host : "smtp.gmail.com",
-    Username : "michaelmasala18@gmail.com",
-    Password : "950626@Cliche",
-    To : 'michaelmasala18@gmail.com',
-    From : document.getElementById("Email").value, 
-    Subject : "New Contact Form Inquiry",
-    Body : "Name:" + document.getElementById("Name").value
-    + "<br> Email:" + document.getElementById("Email").value
-    + "<br> "
-}).then(
-  message => alert(message)
-);
-            }
-
-            </script> -->
-
         </section>
-
-        <div class="space1"></div>
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
+
 </html>
