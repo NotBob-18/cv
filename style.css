@@ -230,12 +230,12 @@ h2 {
 }
 .space1 {
   /* background-color: azure; */
-  width: 100vw;
+  width: 0;
   height: 15rem;
 }
 
 .space2 {
-  width: 100vw;
+  width: 0;
   height: 5rem;
 }
 
